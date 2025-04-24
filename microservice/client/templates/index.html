@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f2f2f2; }
+        h1 { color: #333; }
+        form { margin-bottom: 1em; }
+        ul { list-style: none; padding: 0; }
+        li { background: #fff; margin: 0.5em 0; padding: 0.5em; border-radius: 5px; }
+        button { margin-left: 1em; }
+    </style>
+</head>
+<body>
+    <h1>📋 Gestor de Tareas</h1>
+    <form action="/add" method="post">
+        <input type="text" name="title" placeholder="Nueva tarea..." required>
+        <button type="submit">Agregar</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {% if task.completed %}
+                    ✅ <s>{{ task.title }}</s>
+                {% else %}
+                    🔲 {{ task.title }}
+                    <form action="/complete/{{ task.id }}" method="post" style="display:inline;">
+                        <button>Completar</button>
+                    </form>
+                {% endif %}
+                <form action="/delete/{{ task.id }}" method="post" style="display:inline;">
+                    <button>Eliminar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
