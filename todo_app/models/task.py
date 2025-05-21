@@ -3,7 +3,7 @@ class Estudiante:
         self.id = id
         self.nombre = nombre
         self.edad = edad
-        self.correo = correo
+        self.correo = correos
         self.materias = materias or {}
 
     def to_dict(self):
@@ -11,7 +11,7 @@ class Estudiante:
             "id": self.id,
             "nombre": self.nombre,
             "edad": self.edad,
-            "correo": self.correo,
+            "correo": self.correos,
             "materias": self.materias
         }
 
@@ -21,6 +21,6 @@ class Estudiante:
             id=data['id'],
             nombre=data['nombre'],
             edad=data['edad'],
-            correo=data['correo'],
+            correo=data['correos'],
             materias=data.get('materias', {})
         )
