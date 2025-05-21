@@ -18,7 +18,7 @@ def mostrar_estudiante(estudiante):
     print(f"ID: {estudiante.id}")
     print(f"Nombre: {estudiante.nombre}")
     print(f"Edad: {estudiante.edad}")
-    print(f"Correo: {estudiante.correo}")
+    print(f"Correo: {estudiante.correos}")
     print("Materias inscritas:")
     for materia, nota in estudiante.materias.items():
         print(f"  - {materia}: {nota if nota is not None else 'Sin calificación'}")
