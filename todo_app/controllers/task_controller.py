@@ -19,15 +19,13 @@ def registrar_estudiante(data):
         except ValueError:
             print("Edad inválida")
 
-    correo = input("Correo electrónico: ").strip()
-    while "@" not in correo or "." not in correo:
+    correos = input("Correo electrónico: ").strip()
+    while "@" not in correos or "." not in correos:
         print("Correo inválido")
-        correo = input("Correo electrónico: ").strip()
+        correos = input("Correo electrónico: ").strip()
 
-    estudiante = Estudiante(id=data["next_id"], nombre=nombre, edad=edad, correo=correo)
+    estudiante = Estudiante(id=data["next_id"], nombre=nombre, edad=edad, correos=correos)
     data["estudiantes"].append(estudiante)
     data["next_id"] += 1
     guardar_datos(data)
     print(f"Estudiante {nombre} registrado con ID {estudiante.id}")
-
-# (Y continuarías implementando las otras funciones del controlador como listar_estudiantes, buscar, agregar_materia, etc.)
