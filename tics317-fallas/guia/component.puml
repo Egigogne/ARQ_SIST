@@ -1,0 +1,24 @@
+@startuml C4_Component
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+LAYOUT_WITH_LEGEND()
+
+' Contenedor: Servicio Usuarios
+Container_Boundary(servicioUsuarios, "Servicio Usuarios") {
+    Component(controladorLogin, "Controlador Login", "REST Controller", "Gestiona las solicitudes de login")
+    Component(servicioRecuperacion, "Servicio Recuperación Contraseña", "Service", "Recupera contraseñas")
+    Component(moduloJWT, "Módulo Validación JWT", "Library", "Valida y genera tokens JWT")
+}
+
+' Contenedor: Servicio Cursos
+Container_Boundary(servicioCursos, "Servicio Cursos") {
+    Component(gestionModulos, "Módulo Gestión Módulos", "Service", "Administra módulos de curso")
+    Component(repoMateriales, "Repositorio Materiales", "Repository", "Accede a los materiales del curso")
+}
+
+' Relaciones internas ejemplo
+Rel(controladorLogin, servicioRecuperacion, "Usa")
+Rel(controladorLogin, moduloJWT, "Valida token con")
+
+Rel(gestionModulos, repoMateriales, "Obtiene materiales de")
+
+@enduml

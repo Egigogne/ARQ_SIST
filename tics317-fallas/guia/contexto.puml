@@ -1,0 +1,25 @@
+@startuml C4_Context
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+LAYOUT_TOP_DOWN()
+
+' Personas
+Person(student, "Estudiante")
+Person(teacher, "Docente")
+
+' Sistema principal
+System(web, "Plataforma Web")
+
+' Sistemas externos
+System(api, "API Backend")
+SystemDb(db, "Base de Datos")
+System_Ext(cdn, "CDN")
+
+' Relaciones
+student --> web : Usa
+teacher --> web : Usa
+web --> api : Solicita datos
+api --> db : Lee/Escribe
+web --> cdn : Carga recursos
+
+@enduml

@@ -1,0 +1,31 @@
+2025-06-05 09:57:14,730 - INFO - Verificando servidores al inicio...
+2025-06-05 09:57:18,772 - INFO - Balanceador de carga iniciado en http://localhost:8080
+2025-06-05 09:57:18,772 - INFO - Puedes verificar el estado de los servidores en http://localhost:8080/status
+2025-06-05 09:57:18,792 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.52.103.72:8080
+2025-06-05 09:57:18,792 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-05 09:57:24,682 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:24] "GET / HTTP/1.1" 200 -
+2025-06-05 09:57:26,829 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-05 09:57:31,816 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:31] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:57:37,308 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:37] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:57:42,285 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:42] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:57:47,288 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:47] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:57:52,271 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:52] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:57:57,283 - INFO - 127.0.0.1 - - [05/Jun/2025 09:57:57] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:02,279 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:02] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:07,316 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:07] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:12,297 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:12] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:16,671 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:16] "[33mPUT /api/tasks/999/complete HTTP/1.1[0m" 404 -
+2025-06-05 09:58:17,303 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:17] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:20,771 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:20] "[31m[1mPOST /api/tasks HTTP/1.1[0m" 400 -
+2025-06-05 09:58:22,297 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:22] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:24,871 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:24] "[35m[1mPOST /api/tasks/simulate-error HTTP/1.1[0m" 500 -
+2025-06-05 09:58:27,298 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:27] "GET /info HTTP/1.1" 200 -
+2025-06-05 09:58:29,960 - INFO - 127.0.0.1 - - [05/Jun/2025 09:58:29] "GET /errors/stats HTTP/1.1" 200 -
+2025-06-05 09:59:04,290 - INFO - 127.0.0.1 - - [05/Jun/2025 09:59:04] "GET /info HTTP/1.1" 200 -
+2025-06-05 10:00:04,281 - INFO - 127.0.0.1 - - [05/Jun/2025 10:00:04] "GET /info HTTP/1.1" 200 -
+2025-06-05 10:01:04,315 - INFO - 127.0.0.1 - - [05/Jun/2025 10:01:04] "GET /info HTTP/1.1" 200 -
+2025-06-05 10:02:04,317 - INFO - 127.0.0.1 - - [05/Jun/2025 10:02:04] "GET /info HTTP/1.1" 200 -
+2025-06-05 10:03:04,304 - INFO - 127.0.0.1 - - [05/Jun/2025 10:03:04] "GET /info HTTP/1.1" 200 -

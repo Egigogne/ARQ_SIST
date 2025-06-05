@@ -1,0 +1,22 @@
+@startuml
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+LAYOUT_WITH_LEGEND()
+
+' Definir los contenedores
+Container(FrontendWebSPA, "Frontend Web SPA", "Single Page Application", "Permite la interacción del usuario con el sistema")
+Container(API_Gateway, "API Gateway", "API Gateway", "Gestiona la comunicación entre el frontend y los servicios backend")
+Container(ServicioCursos, "Servicio Cursos", "API", "Proporciona información sobre los cursos")
+Container(ServicioUsuarios, "Servicio Usuarios", "API", "Gestiona usuarios")
+Container(ServicioStreaming, "Servicio Streaming", "API", "Gestiona el contenido de streaming")
+ContainerDb(PostgreSQL, "PostgreSQL", "Base de datos", "Almacena información sobre los cursos")
+Container(CDN, "CDN", "Red de distribución de contenido", "Entrega contenido estático y multimedia de manera eficiente")
+
+' Relaciones
+Rel(FrontendWebSPA, API_Gateway, "Hace solicitudes")
+Rel(API_Gateway, ServicioCursos, "Redirige solicitudes")
+Rel(API_Gateway, ServicioUsuarios, "Redirige solicitudes")
+Rel(API_Gateway, ServicioStreaming, "Redirige solicitudes")
+Rel(ServicioCursos, PostgreSQL, "Accede a los datos de cursos")
+Rel(ServicioStreaming, CDN, "Entrega contenido de streaming")
+
+@enduml

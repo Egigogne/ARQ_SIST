@@ -1,0 +1,4 @@
+[2025-06-05 09:51:07] WEB: Tarea eliminada: Tarea de prueba (servidor 127.0.0.1:5002)
+[2025-06-05 09:51:08] WEB: Tarea eliminada: probando (servidor 127.0.0.1:5002)
+[2025-06-05 09:51:11] WEB: Tarea eliminada: tarea 2 (servidor 127.0.0.1:5001)
+[2025-06-05 09:51:19] WEB: Nueva tarea añadida: tarea 3 (servidor 127.0.0.1:5000)

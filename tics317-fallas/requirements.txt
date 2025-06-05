@@ -1,0 +1,4 @@
+# Proyecto desarrollado con Python 3.13
+
+# Librería para pruebas unitarias
+pytest>=6.0
